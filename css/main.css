@@ -1,14 +1,21 @@
-/* Your stylesheet goes here */
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+/*Section for overall styling as well as for screens 768px and smaller*/
+/*Changed some style guidelines to better fit screenshots*/
+
+html {
+	height: 100%;
+}
 
 body {
 	font-family: "Lato", Helvetica Neue, Helvetica, sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	background-color: #E9EAEE;
+	height: 100%;
 }
 
 h1 {
@@ -71,15 +78,17 @@ svg {
 }
 
 #motto {
+	padding-right: 4em;
 	display: none;
 }
 
 #header {
-	padding-top: 3em;
+	padding-top: 5em;
 }
 
 #headline {
 	font-style: italic;
+	padding-top: 1em;
 }
  
 #cup {
@@ -89,7 +98,8 @@ svg {
 #information {
 	background-color: #DBDCE3;
 	text-align: center;
-	padding-bottom: 1em;
+	padding-top: 1em;
+	padding-bottom: 2em;
 }
 
 #map {
@@ -108,12 +118,13 @@ dd {
 
 #story {
 	background-color: #DBDCE3;
+	padding-bottom: 1.5em;
 }
 
 #story_img {
 	float: right;
 	max-height: 300px;
-	left-margin: 1em;
+	margin-left: 1em;
 	border-radius: 5px;
 }
 
@@ -125,6 +136,7 @@ footer {
 	clear: both;
 }
 
+/*Style adjustments for screens 768px and up*/
 @media screen and (min-width: 768px) {	
 
 	body {
@@ -153,6 +165,8 @@ footer {
 	#header {
 		min-height: 550px;
 		background-image: url("../img/background-sm.jpg");
+		background-size: cover;
+		height: 100%;
 		background-repeat: no-repeat;
 	}
 
@@ -172,6 +186,17 @@ footer {
 		display: block;
 	}
 
+	#menu {
+		padding-left: 4em;
+		padding-right: 4em;
+		padding-bottom: 1em;
+	}
+
+	#story {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
 	#story_img {
 		max-height: 400px;
 	}
@@ -179,8 +204,15 @@ footer {
 	.col-sm-9 {
 		text-align: right;
 	}
+
+	#soon {
+		margin-left: 4em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
 }
 
+/*Style adjustments for screens 922px and up*/
 @media screen and (min-width: 922px) {
 	h1 {
 		font-size: 4em;
@@ -189,8 +221,13 @@ footer {
 	#header {
 		background-image: url("../img/background-md.jpg");
 	}
+
+	#headline {
+		font-size: 1.25em;
+	}
 }
 
+/*Style adjustments for screens 1200px and up*/
 @media screen and (min-width: 1200px) {
 	#header {
 		background-image: url("../img/background-lg.jpg");
